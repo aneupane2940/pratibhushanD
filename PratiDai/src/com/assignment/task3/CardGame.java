@@ -15,6 +15,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage; 
 
@@ -114,17 +115,14 @@ public class CardGame extends Application {
         box.getChildren().add(iv3);
         
         
-        HBox box1 = new HBox();
+        VBox box1 = new VBox();
         box1.getChildren().add(iv4);
-        
-        HBox box2 = new HBox();
-        box2.getChildren().add(iv5);
+        box1.getChildren().add(iv5);
    
         
         BorderPane border = new BorderPane();
         border.setTop(box);
         border.setLeft(box1);
-        border.setCenter(box2);
         
         Scene scene1 = new Scene(border);
         scene1.setFill(Color.BLUE);
