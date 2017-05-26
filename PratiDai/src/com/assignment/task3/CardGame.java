@@ -9,6 +9,7 @@ import java.util.Optional;
 import java.util.Set;
 
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -87,6 +88,7 @@ public class CardGame extends Application {
         box1.getChildren().add(iv5);
    
         BorderPane border = new BorderPane();
+        border.setPadding(new Insets(100, 70, 70, 180));
         border.setTop(box);
         border.setLeft(box1);
         
@@ -98,6 +100,7 @@ public class CardGame extends Application {
         stage.setTitle("Game Cards");
         stage.setWidth(600);
         stage.setHeight(600);
+        
         stage.setScene(scene1); 
         //stage.sizeToScene(); 
         stage.show(); 
