@@ -8,8 +8,6 @@ public class Subject {
 
 	private String name;
 	private String code;
-	private String discipline;
-	private String subjectCode;
 
 	public Subject(String name, String code) {
 		super();
@@ -31,22 +29,6 @@ public class Subject {
 
 	public void setCode(String code) {
 		this.code = code;
-	}
-
-	public String getDiscipline() {
-		return discipline;
-	}
-
-	public void setDiscipline(String discipline) {
-		this.discipline = discipline;
-	}
-
-	public String getSubjectCode() {
-		return subjectCode;
-	}
-
-	public void setSubjectCode(String subjectCode) {
-		this.subjectCode = subjectCode;
 	}
 
 	public boolean codeMatches(String code) {
@@ -80,10 +62,6 @@ public class Subject {
 	public boolean isValidCode(String code) {
 		String first = code.substring(0, 3);
 		String second = code.substring(3);
-
-		if (!(second != null && second.matches("\\d+"))) {
-			return false;
-		}
 
 		for (char c : first.toCharArray()) {
 			if (!Character.isLetter(c)) {
@@ -124,5 +102,9 @@ public class Subject {
 			}
 		}
 		return sortedSubject;
+	}
+	
+	public String getDiscipline(){
+		return this.getCode().substring(0, 3);
 	}
 }
